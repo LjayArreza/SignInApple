@@ -16,10 +16,10 @@ class ViewController: UIViewController, FUIAuthDelegate {
     }
 
     @IBAction func LoginBtn(_ sender: Any) {
+        
         if let authUI = FUIAuth.defaultAuthUI() {
             authUI.providers = [FUIOAuth.appleAuthProvider()]
             authUI.delegate = self
-            
             let authViewController = authUI.authViewController()
             self.present(authViewController, animated: true)
         }
