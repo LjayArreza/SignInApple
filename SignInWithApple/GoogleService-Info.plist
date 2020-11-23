@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>400508954655-ndaer1vfhmmojf1il38h4hkmj0ffmrou.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.400508954655-ndaer1vfhmmojf1il38h4hkmj0ffmrou</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>400508954655-n8761m45b6nn8jhij1qrcrvbdmkp0dkj.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8XLIDHAwrgA7-pkzBB9xWOjqm9M-zxAM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>400508954655</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ljay.SignInWithApple</string>
+	<key>PROJECT_ID</key>
+	<string>otpfirebasedemo-dde7a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>otpfirebasedemo-dde7a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:400508954655:ios:a60fb4099a55e948b04d2a</string>
+	<key>DATABASE_URL</key>
+	<string>https://otpfirebasedemo-dde7a.firebaseio.com</string>
+</dict>
+</plist>
