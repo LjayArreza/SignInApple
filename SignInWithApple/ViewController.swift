@@ -55,14 +55,39 @@ class ViewController: UIViewController, FUIAuthDelegate {
 }
 
 extension ViewController : ASAuthorizationControllerDelegate {
-    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        if let appleIdCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            guard let nonce = currentNonce else {
+                fatalError("Invalid State")
+            }
+            
+            guard let appleIdToken = appleIdCredential.identityToken else {
+                print("Unable to fetch token")
+                return
+            }
+            
+            guard let idTokenString = String(data: appleIdToken, encoding: .utf8) else {
+                print("Unable to serialized token string from data: \(appleIdToken.debugDescription)")
+                return
+            }
+            
+            let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+            
+            Auth.auth().signIn(with: credential) { (AuthDataResult, error) in
+                if let user = AuthDataResult?.user {
+                    print("Signed In as \(user.uid), email: \(user.email ?? "unknown"), name: \(user.displayName ?? "") ")
+                }
+                
+            }
+        }
+    }
 }
 
 extension ViewController : ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
-    
     
 }
 
